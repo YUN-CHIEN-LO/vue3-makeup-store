@@ -1,2 +1,3 @@
 import constant from "./constant";
-export default { constant };
+import { isImageValid } from "./isImageValid";
+export default { constant, isImageValid };
