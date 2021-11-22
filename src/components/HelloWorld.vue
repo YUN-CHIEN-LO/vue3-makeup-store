@@ -112,11 +112,24 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
+import api from "@/api";
+import { getProductApi } from "@/type";
 export default defineComponent({
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  mounted() {
+    api.store
+      .getProduct({
+        product_tags: "Organic, Chemical Free",
+      } as getProductApi)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 });
 </script>
