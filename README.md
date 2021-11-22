@@ -1,1 +1,1 @@
-# vue3-makup-stroe
+# vue3-makeup-store
